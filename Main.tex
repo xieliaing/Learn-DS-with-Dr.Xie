@@ -1,0 +1,123 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%\documentclass[font=none]{ctexbook}
+\documentclass{article}
+%\ctexset{font=adobe} 
+\setlength{\intextsep}{4pt plus 1pt minus 1pt}%
+ 
+\usepackage[papersize={170mm, 240mm}, top=30mm, bottom=20mm, right=20mm, left=20mm]{geometry} % See geometry.pdf to learn the
+\usepackage{graphicx,float}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{indentfirst,pifont}
+\usepackage{amsmath,eqnarray}
+\usepackage{empheq,pdfpages}
+\usepackage{xcolor,cases}
+\usepackage{bm}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+\usepackage{fontenc} 
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{tabu}
+\newfontfamily\listingsfontinline[Scale=0.8]{Courier} 
+
+\lstset{   
+   numbers=left,
+   stepnumber=1,
+   language=Python,
+   basicstyle=\listingsfontinline,
+   upquote = true,
+   numberstyle=\tiny\color{blue},
+   keepspaces=false,
+   breaklines=true,
+   tabsize=4,
+   captionpos=b,
+   keywordstyle=\color[rgb]{0, 0, 1},
+   commentstyle=\color{green},
+   stringstyle=\color{black},
+   breaklines=true,
+   %escapeinside={\*}{*)},  
+   xleftmargin=2em,
+   xrightmargin=2em,
+   aboveskip=1em,
+   showstringspaces=false
+}
+
+\newcommand*\justify{%
+  \fontdimen2\font=0.4em% interword space
+  \fontdimen3\font=0.2em% interword stretch
+  \fontdimen4\font=0.1em% interword shrink
+  \fontdimen7\font=0.1em% extra space
+  \hyphenchar\font=`\-% allowing hyphenation
+}
+
+%%% define common math terms
+\providecommand{\Cov}{\ensuremath{\mathrm{Cov}}}
+\providecommand{\Var}{\ensuremath{\mathrm{Var}}}
+\providecommand{\E}{\ensuremath{\mathrm{E}}}
+\DeclareTextFontCommand{\bfemph}{ \bfseries\em}
+
+ %字体设置
+%\setCJKmainfont[BoldFont={FZHei-B01S}]{FZShuSong-Z01S}
+%%全局CJK 衬线字体：宋体, 正文的中文字体
+%
+%\setmainfont[Ligatures=TeX]{Times New Roman}
+%\setmonofont{Courier New}
+%%\setsansfont{TeX Gyre Pagella}
+%\setsansfont{Helvetica Neue}
+%\setCJKsansfont{FZHei-B01S}
+ 
+\usepackage[labelsep=space,font={small}]{caption}
+%\setromanfont{STHeiti}
+\usepackage[pdfstartview=FitH,
+CJKbookmarks=true,
+bookmarksnumbered=true,
+bookmarksopen=true,
+colorlinks,
+pdfborder=001, %color borders
+linkcolor=black,
+anchorcolor=black,
+urlcolor=blue,
+citecolor=darkblue]{hyperref} %bookmarks
+\title{}
+\author{作者}
+%\setCJKfamilyfont{hei}{FZHei-B01S}
+%\setCJKfamilyfont{kai}{FZKai-Z03S}
+%\renewcommand\heiti{\CJKfamily{hei}}
+%\renewcommand\kaishu{\CJKfamily{kai}}
+%\newCJKfontfamily\zhyuan{FZZhunYuan-M02S}
+
+\input format
+ 
+ 
+\allowdisplaybreaks[4]
+
+\begin{document}
+\thispagestyle{empty}
+
+
+
+\pagestyle{headings}
+
+\chapter*{ 前\qquad 言} 
+%\section{我为什么要写这本书}
+\include{./Chapter01/前言}
+%这是一本关于数据挖掘和深度学习应用案例的实用书籍。
+
+\renewcommand{\thepage}{\Roman{page}}
+\tableofcontents
+
+
+\mainmatter
+
+\chapter{数据分析的心理学基础}
+\include{./Chapter02/数据分析的心理学基础}
+
+
+\end{document}
+ 

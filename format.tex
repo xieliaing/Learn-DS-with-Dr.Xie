@@ -1,0 +1,28 @@
+
+%%定制样式
+\ctexset{
+chapter ={
+number = \arabic{chapter},
+numberformat =\sffamily\color{gray},
+beforeskip={30pt  plus .2ex  minus -.2ex},
+afterskip={25pt  plus 3pt  minus 3pt}},
+section = {
+format=\large\raggedright,numberformat =\sffamily
+},
+subsection = {
+format={\normalsize\bfseries\raggedright},
+beforeskip={10pt  plus .2ex  minus -.2ex},
+afterskip={3pt   plus 2pt  minus 1pt}}
+}
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else\hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+  \def\ps@headings{%
+      \let\@oddfoot\@empty\let\@evenfoot\@empty
+      \def\@evenhead{\hbox to \textwidth {\thepage\hfill\leftmark}}%
+      \def\@oddhead{\hbox to \textwidth {{\kaishu 数据挖掘与深度学习——案例研究}\hfil\thepage}}}%
+    \def\ps@plain{%
+      \let\@oddfoot\@empty%
+      \let\@evenfoot\@empty%
+      \let\@evenhead\@empty%
+      \let\@oddhead\@empty}%
+\makeatother
